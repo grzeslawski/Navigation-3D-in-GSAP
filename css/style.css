@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+  background-color: #dde1e5;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tab {
+  padding: 0 30px;
+  width: 40%;
+  min-width: 320px;
+  max-width: 587px;
+  max-height: 133px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 20px 20px -15px rgba(178, 187, 196, 0.5);
+          box-shadow: 0 20px 20px -15px rgba(178, 187, 196, 0.5);
+}
+
+@media (min-width: 800px) {
+  .tab {
+    border-radius: 20px;
+  }
+}
+
+.tab__indicator {
+  position: absolute;
+  left: 0;
+  width: 43px;
+  height: 4px;
+  background-color: #b80000;
+  z-index: 9999;
+  display: block;
+  border-radius: 30px;
+}
+
+@media (min-width: 800px) {
+  .tab__indicator {
+    width: 50px;
+  }
+}
+
+.tab__items {
+  list-style: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  max-height: 100%;
+}
+
+.tab__item {
+  cursor: pointer;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tab__item * {
+  pointer-events: none;
+}
+
+.tab__icon {
+  width: 40%;
+  max-height: 50px;
+}
+
+.tab__icon path {
+  fill: #bbc3cc;
+  -webkit-transition: fill 0.5s ease-in-out;
+  transition: fill 0.5s ease-in-out;
+}
+
+.tab__item--active path {
+  fill: #b80000;
+}
+
+.tab__title {
+  margin: 10% 0 0 0;
+  color: #bbc3cc;
+  font-size: 17px;
+  -webkit-transition: opacity 0.3s 0.15s ease-out;
+  transition: opacity 0.3s 0.15s ease-out;
+}
+
+.tab__item--active .tab__title {
+  color: #b80000;
+}
+/*# sourceMappingURL=style.css.map */
